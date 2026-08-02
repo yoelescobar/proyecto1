@@ -1,72 +1,176 @@
-/* Fondo de la página */
-body{
-    background: #fff6e9;
-    font-family: Arial, Helvetica, sans-serif;
+/* =======================================================
+   Barbería Navaja Fina — style.css
+   Paleta: carbón #1C1A17 · crema #F2ECE1 · bronce #C8963E · vino #7A2E2E
+   ======================================================= */
+
+:root {
+    --carbon: #1c1a17;
+    --crema: #f2ece1;
+    --bronce: #c8963e;
+    --vino: #7a2e2e;
 }
 
-/* Título principal */
-h1{
-    color: #c40000;
-    font-size: 300%;
-    text-align: center;
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--crema);
+    color: var(--carbon);
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+}
+
+h1, h2, h3, .navbar-brand {
+    font-family: "Bebas Neue", sans-serif;
+    letter-spacing: 0.05em;
+    color: var(--carbon);
+}
+
+/* ===================== HEADER / NAV ===================== */
+.site-header {
+    background-color: var(--carbon);
+}
+
+.navbar-brand {
+    color: var(--bronce) !important;
+    font-size: 1.8rem;
+}
+
+.navbar-dark .nav-link {
+    color: var(--crema) !important;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.navbar-dark .nav-link:hover {
+    color: var(--bronce) !important;
+}
+
+/* ===================== HERO ===================== */
+.hero {
+    min-height: 60vh;
+    background:
+        linear-gradient(rgba(28, 26, 23, 0.75), rgba(28, 26, 23, 0.75)),
+        url("https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=1600&q=80")
+        center/cover no-repeat;
+    color: var(--crema);
+}
+
+.hero h1 {
+    color: var(--bronce);
+    font-size: 4rem;
+}
+
+.hero .lead {
+    color: var(--crema);
+}
+
+/* ===================== TÍTULOS DE SECCIÓN ===================== */
+.section-title {
+    border-bottom: 3px solid var(--bronce);
+    display: inline-block;
+    padding-bottom: 0.25rem;
+    margin-bottom: 1.5rem;
+}
+
+/* ===================== SERVICIOS — FLEXBOX ===================== */
+.servicios-lista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+}
+
+.servicio-card {
+    flex: 1 1 220px;
+    background-color: #fff;
+    border: 1px solid #e2d9c8;
+    border-left: 5px solid var(--bronce);
+    border-radius: 6px;
+    padding: 1.25rem;
+}
+
+.servicio-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.servicio-card .precio {
+    display: block;
+    margin-top: 0.75rem;
+    font-weight: 700;
+    color: var(--vino);
+}
+
+/* ===================== GALERÍA ===================== */
+.galeria-img {
+    width: 100%;
+    max-height: 420px;
+    object-fit: cover;
+}
+
+figcaption {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #6b6459;
+}
+
+/* ===================== ASIDE ===================== */
+.horarios li {
+    margin-bottom: 0.4rem;
+}
+
+.redes {
+    display: flex;
+    gap: 1rem;
+}
+
+.redes a {
+    color: var(--vino);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.redes a:hover {
     text-decoration: underline;
 }
 
-/* Subtítulos */
-h2{
-    color: blue;
-    font-size: 200%;
-    text-align: left;
+/* ===================== MULTIMEDIA — FLEXBOX ===================== */
+.multimedia-lista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.multimedia-item {
+    flex: 1 1 320px;
+}
+
+.multimedia-item audio {
+    width: 100%;
+}
+
+/* ===================== FOOTER ===================== */
+.site-footer {
+    background-color: var(--carbon);
+    color: var(--crema);
+    padding: 2rem 0;
+    margin-top: 3rem;
+}
+
+.site-footer a {
+    color: var(--bronce);
+    text-decoration: none;
+}
+
+.site-footer a:hover {
     text-decoration: underline;
 }
 
-/* Ingredientes */
-ul{
-    color: #2f6ea5;
-    font-size: 18px;
-}
-
-/* Pasos */
-ol{
-    color: #228B22;
-    font-size: 18px;
-    text-align: justify;
-}
-
-/* Texto final */
-p{
-    font-size: 18px;
-}
-
-/* Imágenes */
-img{
-    width: 400px;
-    height: auto;
-    border-radius: 10px;
-}
-
-/* Video */
-iframe{
-    width: 560px;
-    height: 315px;
-}
-
-/* Navegador */
-nav{
-    background: #ffe0b2;
-    padding: 10px;
-    text-align: center;
-}
-
-/* Enlaces */
-a{
-    color: darkred;
-    font-size: 18px;
-}
-
-/* Pie final */
-.final{
-    color: #5d65ff;
-    font-size: 20px;
-    text-align: center;
+/* ===================== RESPONSIVE ===================== */
+@media (max-width: 576px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
 }
