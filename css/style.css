@@ -57,9 +57,8 @@ h1, h2, h3, .navbar-brand {
     bottom: 0.2rem;
     height: 2px;
     background-color: var(--bronce);
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.2s ease;
+    opacity: 0.35;
+    transition: opacity 0.2s ease;
 }
 
 .navbar-dark .nav-link:hover {
@@ -67,7 +66,7 @@ h1, h2, h3, .navbar-brand {
 }
 
 .navbar-dark .nav-link:hover::after {
-    transform: scaleX(1);
+    opacity: 1;
 }
 
 /* ===================== HERO ===================== */
