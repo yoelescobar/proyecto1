@@ -41,11 +41,33 @@ h1, h2, h3, .navbar-brand {
 .navbar-dark .nav-link {
     color: var(--crema) !important;
     font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    padding: 0.5rem 0.9rem !important;
+    position: relative;
     transition: color 0.2s ease;
+}
+
+.navbar-dark .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0.9rem;
+    right: 0.9rem;
+    bottom: 0.2rem;
+    height: 2px;
+    background-color: var(--bronce);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.2s ease;
 }
 
 .navbar-dark .nav-link:hover {
     color: var(--bronce) !important;
+}
+
+.navbar-dark .nav-link:hover::after {
+    transform: scaleX(1);
 }
 
 /* ===================== HERO ===================== */
